@@ -1,0 +1,26 @@
+-- an applescript program that opens a list of urls in separate tabs.
+-- opens safari, then loads each url in a separate tab.
+-- written by alvin alexander, devdaily.com
+-- no rights reserved, feel free to copy and improve this program.
+
+set urlList to {"http://www.macintouch.com/", "http://www.macnn.com/", "http://www.macworld.com/", "http://www.thinksecret.com/", "http://www.tuaw.com/"}
+set numURLs to (count urlList)
+
+tell application "Safari"
+	activate
+	-- create all the tabs that are needed
+	tell application "System Events"
+		-- enter the url in the open window
+		keystroke (item 1 of urlList)
+		key code 36
+		repeat with i from 2 to (numURLs)
+			-- for each additional url, first create a tab
+			tell process "Safari"
+				click menu item "New Tab" of menu "File" of menu bar 1
+			end tell
+			-- now enter the url
+			keystroke (item i of urlList)
+			key code 36
+		end repeat
+	end tell
+end tell

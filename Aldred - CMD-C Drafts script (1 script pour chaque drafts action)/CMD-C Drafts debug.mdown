@@ -1,0 +1,49 @@
+set theURL to "command-c://x-callback-url/copyText?deviceName=" & theDevice & "&text=drafts%3A%2F%2Fx-callback-url%2Fcreate%3Ftext%3D" & my urlencode(theText)
+
+command-c://x-callback-url/copyText?deviceName=" & theDevice & "&text=drafts%3A%2F%2Fx-callback-url%2Fcreate%3Ftext%3D" & my urlencode(theText)
+
+
+iPhone%20d%27AnkhoD
+
+MacBook%20Pro%20de%20AnkhoD
+
+
+__________  
+
+command-c://x-callback-url/copyText?deviceName=[MacBook Pro de AnkhoD]&x-source=Launch%20Pro&x-success={{launch://}}&text=
+
+
+command-c://x-callback-url/copy?deviceName=
+
+
+
+command-c://x-callback-url/copyText?deviceName=[MacBook Pro de AnkhoD]&x-source=Launch%20Pro&x-success={{launch://}}&text=
+
+command-c://x-callback-url/copy?deviceName=
+
+command-c://x-callback-url/copy?deviceName=MacBook%20Pro%20de%20AnkhoD
+
+
+command-c://x-callback-url/copy?x-source=SourceApp&x-success={{sourceapp://}}&x-error={{sourceapp://}}&deviceName=SomeDevice
+
+Copy is the basic action to share the current clipboard content to another device.
+command-c://x-callback-url/copy?x-source=SourceApp&x-success={{sourceapp://}}&x-error={{sourceapp://}}&deviceName=MacBook%20Pro%20de%20AnkhoD
+
+For example, to copy the current clipboard to a device named Danilo’s Macbook Pro.
+command-c://x-callback-url/copy?deviceName=Danilo%27s%20MacBook%20Pro
+
+command-c://x-callback-url/copyAndOpenURL?deviceName=MacBook%20Pro%20de%20AnkhoD
+
+
+
+
+## Need to get the main LCPx page ##
+
+- Edit add new cmd-c acitons
+	- CBx to Mac (direct, no prompte or anything) ajouter x-callback to return to lcpx
+
+	## Same for drafts : 
+	- CBx to Mac (direct, no prompte or anything) ajouter x-callback to return to lcpx
+
+
+

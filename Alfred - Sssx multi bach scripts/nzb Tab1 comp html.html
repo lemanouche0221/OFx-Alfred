@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.35">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 39.2px; text-indent: -39.3px; font: 12.0px Verdana; color: #5e6161}
+    p.p2 {margin: 0.0px 0.0px 0.0px 39.2px; text-indent: -39.3px; font: 12.0px Verdana; min-height: 15.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 39.2px; text-indent: -39.3px; font: 12.0px Verdana}
+    p.p4 {margin: 0.0px 0.0px 0.0px 39.2px; text-indent: -39.3px; font: 12.0px Verdana; color: #4d8f2a}
+    p.p5 {margin: 0.0px 0.0px 0.0px 78.5px; text-indent: -78.6px; font: 12.0px Verdana; color: #1738f5}
+    p.p6 {margin: 0.0px 0.0px 0.0px 78.5px; text-indent: -78.6px; font: 12.0px Verdana; color: #5e6161}
+    p.p7 {margin: 0.0px 0.0px 0.0px 78.5px; text-indent: -78.6px; font: 12.0px Verdana}
+    p.p8 {margin: 0.0px 0.0px 0.0px 117.8px; text-indent: -117.8px; font: 12.0px Verdana; color: #5e6161}
+    p.p9 {margin: 0.0px 0.0px 0.0px 117.8px; text-indent: -117.8px; font: 12.0px Verdana; color: #1738f5}
+    p.p10 {margin: 0.0px 0.0px 0.0px 117.8px; text-indent: -117.8px; font: 12.0px Verdana}
+    p.p11 {margin: 0.0px 0.0px 0.0px 157.1px; text-indent: -157.2px; font: 12.0px Verdana; color: #5e6161}
+    p.p12 {margin: 0.0px 0.0px 0.0px 157.1px; text-indent: -157.2px; font: 12.0px Verdana}
+    p.p13 {margin: 0.0px 0.0px 0.0px 196.4px; text-indent: -196.4px; font: 12.0px Verdana}
+    p.p14 {margin: 0.0px 0.0px 0.0px 157.1px; text-indent: -157.2px; font: 12.0px Verdana; color: #1738f5}
+    span.s1 {color: #4d8f2a}
+    span.s2 {color: #000000}
+    span.s3 {color: #1738f5}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">-- an applescript program that opens a list of urls in separate tabs.</p>
+<p class="p1">-- opens safari, then loads each url in a separate tab.</p>
+<p class="p1">-- written by alvin alexander, devdaily.com</p>
+<p class="p1">-- no rights reserved, feel free to copy and improve this program.</p>
+<p class="p2"><br></p>
+<p class="p3"><b>set</b> <span class="s1">urlList</span> <b>to</b> {"http://www.macintouch.com/", "http://www.macnn.com/", "http://www.macworld.com/", "http://www.thinksecret.com/", "http://www.tuaw.com/"}</p>
+<p class="p4"><span class="s2"><b>set</b> </span>numURLs<span class="s2"> <b>to</b> (</span><span class="s3"><b>count</b></span><span class="s2"> </span>urlList<span class="s2">)</span></p>
+<p class="p2"><br></p>
+<p class="p3"><b>tell</b> <span class="s3"><i>application</i></span> "Safari"</p>
+<p class="p5"><span class="s2"><span class="Apple-tab-span">	</span></span><b>activate</b></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span></span>-- create all the tabs that are needed</p>
+<p class="p7"><span class="Apple-tab-span">	</span><b>tell</b> <span class="s3"><i>application</i></span> "System Events"</p>
+<p class="p8"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>-- enter the url in the open window</p>
+<p class="p9"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><b>keystroke</b><span class="s2"> (</span><i>item</i><span class="s2"> 1 <b>of</b> </span><span class="s1">urlList</span><span class="s2">)</span></p>
+<p class="p9"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><b>key code</b><span class="s2"> 36</span></p>
+<p class="p10"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>repeat</b> <b>with</b> <span class="s1">i</span> <b>from</b> 2 <b>to</b> (<span class="s1">numURLs</span>)</p>
+<p class="p11"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>-- for each additional url, first create a tab</p>
+<p class="p12"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>tell</b> <span class="s3"><i>process</i></span> "Safari"</p>
+<p class="p13"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3"><b>click</b></span> <span class="s3"><i>menu item</i></span> "New Tab" <b>of</b> <span class="s3"><i>menu</i></span> "File" <b>of</b> <span class="s3"><i>menu bar</i></span> 1</p>
+<p class="p12"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>end</b> <b>tell</b></p>
+<p class="p11"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>-- now enter the url</p>
+<p class="p14"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><b>keystroke</b><span class="s2"> (</span><i>item</i><span class="s2"> </span><span class="s1">i</span><span class="s2"> <b>of</b> </span><span class="s1">urlList</span><span class="s2">)</span></p>
+<p class="p14"><span class="s2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><b>key code</b><span class="s2"> 36</span></p>
+<p class="p10"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>end</b> <b>repeat</b></p>
+<p class="p7"><span class="Apple-tab-span">	</span><b>end</b> <b>tell</b></p>
+<p class="p3"><b>end</b> <b>tell</b></p>
+</body>
+</html>
